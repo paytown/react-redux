@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { ADD_POST } from './actions/actionCreators';
+import { ADD_POST, addPost } from './actions/actionCreators';
 
 const initialState = {
   title: null,
@@ -21,11 +21,5 @@ function reducer(state = initialState, action) {
 
 const store = createStore(reducer);
 
-store.dispatch({
-  type: ADD_POST,
-  payload: {
-    title: 'My Cool Blog',
-    body: 'Hello world!'
-  }
-});
+store.dispatch(addPost('hi', 'body'));
 console.log('added post', store.getState());
