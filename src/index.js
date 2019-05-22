@@ -1,4 +1,6 @@
 import { createStore } from 'redux';
+import { ADD_BEANS, addBeans, ADD_FRUIT, addFruit, ADD_DRINK, addDrink, REMOVE_BEANS, removeBeans, REMOVE_FRUIT, removeFruit, REMOVE_DRINK, removeDrink, EMPTY_BOX, emptyBox, FILL_EM_ALL, fillEmAll } from './actions/actionCreators';
+
 
 const initialState = {
   beans: null,
@@ -6,53 +8,53 @@ const initialState = {
   drink: null
 };
 
-const ADD_BEANS = 'ADD_BEANS';
-const addBeans = beans => ({
-  type: ADD_BEANS,
-  payload: beans
-});
+// const ADD_BEANS = 'ADD_BEANS';
+// const addBeans = beans => ({
+//   type: ADD_BEANS,
+//   payload: beans
+// });
 
-const ADD_FRUIT = 'ADD_FRUIT';
-const addFruit = fruit => ({
-  type: ADD_FRUIT,
-  payload: fruit
-});
+// const ADD_FRUIT = 'ADD_FRUIT';
+// const addFruit = fruit => ({
+//   type: ADD_FRUIT,
+//   payload: fruit
+// });
 
-const ADD_DRINK = 'ADD_DRINK';
-const addDrink = drink => ({
-  type: ADD_DRINK,
-  payload: drink
-});
+// const ADD_DRINK = 'ADD_DRINK';
+// const addDrink = drink => ({
+//   type: ADD_DRINK,
+//   payload: drink
+// });
 
-const REMOVE_BEANS = 'REMOVE_BEANS';
-const removeBeans = () => ({
-  type: REMOVE_BEANS
-});
+// const REMOVE_BEANS = 'REMOVE_BEANS';
+// const removeBeans = () => ({
+//   type: REMOVE_BEANS
+// });
 
-const REMOVE_FRUIT = 'REMOVE_FRUIT';
-const removeFruit = () => ({
-  type: REMOVE_FRUIT
-});
+// const REMOVE_FRUIT = 'REMOVE_FRUIT';
+// const removeFruit = () => ({
+//   type: REMOVE_FRUIT
+// });
 
-const REMOVE_DRINK = 'REMOVE_DRINK';
-const removeDrink = () => ({
-  type: REMOVE_DRINK
-});
+// const REMOVE_DRINK = 'REMOVE_DRINK';
+// const removeDrink = () => ({
+//   type: REMOVE_DRINK
+// });
 
-const EMPTY_BOX = 'EMPTY_BOX';
-const emptyBox = () => ({
-  type: EMPTY_BOX
-});
+// const EMPTY_BOX = 'EMPTY_BOX';
+// const emptyBox = () => ({
+//   type: EMPTY_BOX
+// });
 
-const FILL_EM_ALL = 'FILL_EM_ALL';
-const fillEmAll = (beans, fruit, drink) => ({
-  type: FILL_EM_ALL,
-  payload: {
-    beans: beans,
-    fruit: fruit,
-    drink: drink
-  }
-})
+// const FILL_EM_ALL = 'FILL_EM_ALL';
+// const fillEmAll = (beans, fruit, drink) => ({
+//   type: FILL_EM_ALL,
+//   payload: {
+//     beans: beans,
+//     fruit: fruit,
+//     drink: drink
+//   }
+// });
 
 function reducer(state = initialState, action) {
   switch(action.type) {
