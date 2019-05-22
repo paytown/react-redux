@@ -14,6 +14,12 @@ function reducer(state = initialState, action) {
       return { ...state, fruit: action.payload };
     case 'ADD_DRINK':
       return { ...state, drink: action.payload };
+    case 'REMOVE_BEANS':
+      return { ...state, beans: null };
+    case 'REMOVE_FRUIT':
+      return { ...state, fruit: null };
+    case 'REMOVE_DRINK':
+      return { ...state, drink: null };
     case 'EMPTY_BOX':
       return { ...state, beans: null, fruit: null, drink: null };
     case 'FILL_EM_ALL':
@@ -45,9 +51,19 @@ store.dispatch({
 console.log('with drink', store.getState());
 
 store.dispatch({
-  type: 'EMPTY_BOX'
+  type: 'REMOVE_BEANS'
 });
-console.log('empty', store.getState());
+console.log('remove beans', store.getState());
+
+store.dispatch({
+  type: 'REMOVE_FRUIT'
+});
+console.log('remove FRUIT', store.getState());
+
+store.dispatch({
+  type: 'REMOVE_DRINK'
+});
+console.log('remove DRINK', store.getState());
 
 store.dispatch({
   type: 'FILL_EM_ALL',
@@ -58,3 +74,8 @@ store.dispatch({
   }
 });
 console.log('everything', store.getState());
+
+store.dispatch({
+  type: 'EMPTY_BOX'
+});
+console.log('empty', store.getState());
