@@ -14,6 +14,8 @@ function reducer(state = initialState, action) {
       return { ...state, fruit: action.payload };
     case 'ADD_DRINK':
       return { ...state, drink: action.payload };
+    case 'EMPTY_BOX':
+      return { ...state, beans: null, fruit: null, drink: null };
     default:
       return state;
   }
@@ -37,5 +39,10 @@ console.log('with fruit', store.getState());
 store.dispatch({
   type: 'ADD_DRINK',
   payload: 'whiskey'
+});
+console.log('with drink', store.getState());
+
+store.dispatch({
+  type: 'EMPTY_BOX'
 });
 console.log('with drink', store.getState());
