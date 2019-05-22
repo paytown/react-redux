@@ -6,3 +6,12 @@ export const addPost = (title, body) => ({
     body: body
   }
 });
+
+export const REMOVE_POST = 'REMOVE_POST';
+export const removePost = () => ({
+  type: REMOVE_POST,
+  payload: {
+    title: null,
+    body: null
+  }
+});
