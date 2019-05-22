@@ -16,6 +16,8 @@ function reducer(state = initialState, action) {
       return { ...state, drink: action.payload };
     case 'EMPTY_BOX':
       return { ...state, beans: null, fruit: null, drink: null };
+    case 'FILL_EM_ALL':
+      return { ...state, beans: action.payload.beans, fruit: action.payload.fruit, drink: action.payload.drink };
     default:
       return state;
   }
@@ -45,4 +47,14 @@ console.log('with drink', store.getState());
 store.dispatch({
   type: 'EMPTY_BOX'
 });
-console.log('with drink', store.getState());
+console.log('empty', store.getState());
+
+store.dispatch({
+  type: 'FILL_EM_ALL',
+  payload: {
+    beans: 'pinto',
+    fruit: 'apple',
+    drink: 'coke'
+  }
+});
+console.log('everything', store.getState());
