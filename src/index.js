@@ -7,13 +7,52 @@ const initialState = {
 };
 
 const ADD_BEANS = 'ADD_BEANS';
+const addBeans = beans => ({
+  type: ADD_BEANS,
+  payload: beans
+});
+
 const ADD_FRUIT = 'ADD_FRUIT';
+const addFruit = fruit => ({
+  type: ADD_FRUIT,
+  payload: fruit
+});
+
 const ADD_DRINK = 'ADD_DRINK';
+const addDrink = drink => ({
+  type: ADD_DRINK,
+  payload: drink
+});
+
 const REMOVE_BEANS = 'REMOVE_BEANS';
+const removeBeans = () => ({
+  type: REMOVE_BEANS
+});
+
 const REMOVE_FRUIT = 'REMOVE_FRUIT';
+const removeFruit = () => ({
+  type: REMOVE_FRUIT
+});
+
 const REMOVE_DRINK = 'REMOVE_DRINK';
+const removeDrink = () => ({
+  type: REMOVE_DRINK
+});
+
 const EMPTY_BOX = 'EMPTY_BOX';
+const emptyBox = () => ({
+  type: EMPTY_BOX
+});
+
 const FILL_EM_ALL = 'FILL_EM_ALL';
+const fillEmAll = (beans, fruit, drink) => ({
+  type: FILL_EM_ALL,
+  payload: {
+    beans: beans,
+    fruit: fruit,
+    drink: drink
+  }
+})
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -41,50 +80,26 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 console.log('init', store.getState());
 
-store.dispatch({
-  type: ADD_BEANS,
-  payload: 'black beans'
-});
+store.dispatch(addBeans('black'));
 console.log('with beans', store.getState());
 
-store.dispatch({
-  type: ADD_FRUIT,
-  payload: 'durian'
-});
+store.dispatch(addFruit('grape'));
 console.log('with fruit', store.getState());
 
-store.dispatch({
-  type: ADD_DRINK,
-  payload: 'whiskey'
-});
+store.dispatch(addDrink('whiskey'));
 console.log('with drink', store.getState());
 
-store.dispatch({
-  type: REMOVE_BEANS
-});
+store.dispatch(removeBeans());
 console.log('remove beans', store.getState());
 
-store.dispatch({
-  type: REMOVE_FRUIT
-});
+store.dispatch(removeFruit());
 console.log('remove FRUIT', store.getState());
 
-store.dispatch({
-  type: REMOVE_DRINK
-});
+store.dispatch(removeDrink());
 console.log('remove DRINK', store.getState());
 
-store.dispatch({
-  type: FILL_EM_ALL,
-  payload: {
-    beans: 'pinto',
-    fruit: 'apple',
-    drink: 'coke'
-  }
-});
+store.dispatch(fillEmAll('ham', 'beef', 'pork'));
 console.log('everything', store.getState());
 
-store.dispatch({
-  type: EMPTY_BOX
-});
+store.dispatch(emptyBox());
 console.log('empty', store.getState());
