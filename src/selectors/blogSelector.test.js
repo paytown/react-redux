@@ -4,16 +4,16 @@ describe('Blog Selectors', () => {
   it('All Posts', () => {
     const state = {
       posts: [
-        { title: 'post 1', body: 'hi' },
+        { title: 'post 1', body: 'hi', },
         { title: 'post 2', body: 'hey' },
         { title: 'post 3', body: 'howdy' }
       ]
     };
 
     expect(getAllPosts(state)).toEqual([
-      { title: 'post 1', body: 'hi' },
-      { title: 'post 2', body: 'hey' },
-      { title: 'post 3', body: 'howdy' }
+      { id: 0, title: 'post 1', body: 'hi' },
+      { id: 1, title: 'post 2', body: 'hey' },
+      { id: 2, title: 'post 3', body: 'howdy' }
     ]);
   });
 
@@ -27,7 +27,7 @@ describe('Blog Selectors', () => {
     };
 
     expect(getPost(state, 1)).toEqual(
-      { title: 'post 2', body: 'hey' }
+      { id: 1, title: 'post 2', body: 'hey' }
     );
   });
 });
