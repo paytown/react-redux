@@ -8,10 +8,7 @@ export const addPost = (title, body) => ({
 });
 
 export const REMOVE_POST = 'REMOVE_POST';
-export const removePost = () => ({
+export const removePost = id => ({
   type: REMOVE_POST,
-  payload: {
-    title: null,
-    body: null
-  }
+  payload: id
 });
