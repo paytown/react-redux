@@ -12,3 +12,9 @@ export const removePost = id => ({
   type: REMOVE_POST,
   payload: id
 });
+
+export const UPDATE_POST = 'UPDATE_POST';
+export const updatePost = (id, body) => ({
+  type: UPDATE_POST,
+  payload: { id, body }
+});
