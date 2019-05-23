@@ -3,7 +3,7 @@ import { getAllPosts, getPost } from './blogSelector';
 describe('Blog Selectors', () => {
   it('All Posts', () => {
     const state = {
-      posts: [
+      blog: [
         { title: 'post 1', body: 'hi', },
         { title: 'post 2', body: 'hey' },
         { title: 'post 3', body: 'howdy' }
@@ -19,7 +19,7 @@ describe('Blog Selectors', () => {
 
   it('Get post by ID', () => {
     const state = {
-      posts: [
+      blog: [
         { title: 'post 1', body: 'hi' },
         { title: 'post 2', body: 'hey' },
         { title: 'post 3', body: 'howdy' }
