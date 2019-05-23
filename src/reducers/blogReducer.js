@@ -1,4 +1,4 @@
-import { ADD_POST, REMOVE_POST, UPDATE_POST } from '../actions/actionCreators';
+import { ADD_POST, REMOVE_POST, UPDATE_POST } from '../actions/blogActions';
 
 const initialState = [];
 

@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { addPost, removePost, updatePost } from './actions/actionCreators';
+import { addPost, removePost, updatePost } from './actions/blogActions';
 import reducer from './reducers/blogReducer';
 
 const store = createStore(reducer);
