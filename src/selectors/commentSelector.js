@@ -1,1 +1,1 @@
-export const getAllComments = (state, postId) => state.comments[postId];
+export const getAllComments = (state, postId) => state.comment[postId] || [];
