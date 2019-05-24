@@ -10,7 +10,10 @@ export default function App() {
   return (
     <>
     <Router>
-      <Route exact path ="/" component={HomePage} />
+      <Switch>
+        <Route exact path ="/" component={HomePage} />
+        <Route exact path ="/posts/:id" component={PostId}></Route>
+      </Switch>
     </Router>
     </>
   );
