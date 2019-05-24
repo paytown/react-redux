@@ -1,12 +1,17 @@
 import React from 'react';
-import AllPosts from '../containers/posts/AllPosts';
-import CreatePost from '../containers/posts/CreatePost';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import HomePage from '../containers/posts/HomePage';
 
 export default function App() {
   return (
     <>
-      <CreatePost />
-      <AllPosts />
+    <Router>
+      <Route exact path ="/" component={HomePage} />
+    </Router>
     </>
   );
 }

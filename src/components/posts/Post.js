@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Post({ post }) {
   return (
-    <p>{post.title}</p>
+    <Link to={`/${post.id}`}>
+      <p>{post.title}</p>
+    </Link>
   );
 }
 

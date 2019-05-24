@@ -30,11 +30,11 @@ export default class PostForm extends PureComponent {
         flexDirection: 'column',
         width: '300px'
       }}>
-        <input type="text" name="title" value={title} onChange={this.handleChange} />
+        <input type="text" name="title" placeholder="Title" value={title} onChange={this.handleChange} />
         <textarea name="body" value={body} onChange={this.handleChange} style={{
           height:'200px',
           margin: '10px 0'
-        }}></textarea>
+        }} placeholder="Body"></textarea>
         <button>Submit</button>
       </form>
     );
