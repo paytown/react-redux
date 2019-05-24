@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import HomePage from '../containers/posts/HomePage';
+import PostId from '../containers/posts/PostId';
 
 export default function App() {
   return (
