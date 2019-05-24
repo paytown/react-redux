@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function PostDetails({ post }) {
+  const paragraph = post.body.split('\n').map((p, i) => (
+    <p key={i}>{p}</p>
+  ));
   return (
     <div>
       <h1>{post.title}</h1>
-      <p>{post.body}</p>
+      <p>{paragraph}</p>
     </div>
   );
 }
