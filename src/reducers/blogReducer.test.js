@@ -1,5 +1,5 @@
 import reducer from './blogReducer';
-import { addPost } from '../actions/actionCreators';
+import { addPost } from '../actions/blogActions';
 
 describe('blog reducer', () => {
   it('adds a post', () => {

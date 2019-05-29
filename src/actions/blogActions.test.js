@@ -1,4 +1,4 @@
-import { addPost, ADD_POST } from './actionCreators';
+import { addPost, ADD_POST } from './blogActions';
 
 describe('blog action creators', () => {
   it('makes post', () => {
